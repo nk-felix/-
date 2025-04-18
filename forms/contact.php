@@ -1,80 +1,36 @@
-<?php
-// Define variables and set to empty values
-$name = $email = $subject = $message = "";
-$errors = [];
-$success = false;
 
-// Check if the form was submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect and sanitize input data
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
-    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_SPECIAL_CHARS);
-    
-    // Validate inputs
-    if (empty($name)) {
-        $errors[] = "Name is required";
-    }
-    
-    if (empty($email)) {
-        $errors[] = "Email is required";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "Invalid email format";
-    }
-    
-    if (empty($subject)) {
-        $errors[] = "Subject is required";
-    }
-    
-    if (empty($message)) {
-        $errors[] = "Message is required";
-    }
-    
-    // If no errors, proceed with sending email
-    if (empty($errors)) {
-        // Set recipient email to your specified email address
-        $recipient_email = "lax2206x@gmail.com";
-        
-        // Create email headers
-        $headers = 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-        $headers .= "From: " . $email . "\r\n";
-        $headers .= "Reply-To: " . $email . "\r\n";
-        
-        // Prepare email body
-        $email_body = "
-            <html>
-            <head>
-                <title>New Contact Form Submission</title>
-            </head>
-            <body>
-                <h2>Contact Form Submission</h2>
-                <p><strong>Name:</strong> {$name}</p>
-                <p><strong>Email:</strong> {$email}</p>
-                <p><strong>Subject:</strong> {$subject}</p>
-                <p><strong>Message:</strong></p>
-                <p>" . nl2br($message) . "</p>
-            </body>
-            </html>
-        ";
-        
-        // Send email
-        $mail_sent = mail($recipient_email, "Contact Form: $subject", $email_body, $headers);
-        
-        // Check if mail was sent successfully
-        if ($mail_sent) {
-            $success = true;
-            echo json_encode(['status' => 'success', 'message' => 'Your message has been sent. Thank you!']);
-        } else {
-            $errors[] = "Failed to send email. Please try again later.";
-            echo json_encode(['status' => 'error', 'message' => 'Failed to send email. Please try again later.']);
-        }
-    } else {
-        // Return errors as JSON
-        echo json_encode(['status' => 'error', 'message' => implode("<br>", $errors)]);
-    }
-    
-    exit; // Stop script execution after processing
-}
-?>
+<div class="col-lg-7">
+  <form action="https://formspree.io/f/manegzwn" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+    <div class="row gy-4">
+
+      <div class="col-md-6">
+        <label for="name-field" class="pb-2">Your Name</label>
+        <input type="text" name="name" id="name-field" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="email-field" class="pb-2">Your Email</label>
+        <input type="email" class="form-control" name="email" id="email-field" required>
+      </div>
+
+      <div class="col-md-12">
+        <label for="subject-field" class="pb-2">Subject</label>
+        <input type="text" class="form-control" name="subject" id="subject-field" required>
+      </div>
+
+      <div class="col-md-12">
+        <label for="message-field" class="pb-2">Message</label>
+        <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Your message has been sent. Thank you!</div>
+
+        <button type="submit">Send Message</button>
+      </div>
+
+    </div>
+  </form>
+</div><!-- End Contact Form -->
