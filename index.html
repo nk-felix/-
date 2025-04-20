@@ -1132,6 +1132,61 @@ Let's unlock the power of data together.
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+  const form = document.querySelector('.php-email-form');
+  
+  // Prevent the default form submission behavior
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const submitButton = form.querySelector('button[type="submit"]');
+    const loadingDiv = form.querySelector('.loading');
+    const errorDiv = form.querySelector('.error-message');
+    const sentDiv = form.querySelector('.sent-message');
+    
+    // Show loading indicator
+    loadingDiv.style.display = 'block';
+    errorDiv.style.display = 'none';
+    sentDiv.style.display = 'none';
+    submitButton.disabled = true;
+    
+    // Get form data
+    const formData = new FormData(form);
+    
+    // Send form data to Formspree
+    fetch('https://formspree.io/f/manegzwn', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      loadingDiv.style.display = 'none';
+      
+      if (data.ok) {
+        // Success
+        sentDiv.style.display = 'block';
+        form.reset(); // Clear the form
+      } else {
+        // Error
+        errorDiv.textContent = data.error || 'Something went wrong. Please try again.';
+        errorDiv.style.display = 'block';
+      }
+    })
+    .catch(error => {
+      loadingDiv.style.display = 'none';
+      errorDiv.textContent = 'There was a network error. Please try again.';
+      errorDiv.style.display = 'block';
+      console.error(error);
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+    });
+  });
+</script>
+
 </body>
 
 </html>
