@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('contactForm');
   
-  if(form) {
+  if (form) {
     // Completely override the form submission
     form.addEventListener('submit', handleSubmit);
   }
@@ -12,12 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let formData = new FormData(form);
     let submitButton = form.querySelector('button[type="submit"]');
     let loadingDiv = form.querySelector('.loading');
-    let errorDiv = form.querySelector('.error-message');
     let sentDiv = form.querySelector('.sent-message');
     
     // Show loading
     loadingDiv.style.display = 'block';
-    errorDiv.style.display = 'none';
     sentDiv.style.display = 'none';
     submitButton.disabled = true;
     
@@ -45,12 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
       form.reset();
     })
     .catch(error => {
-      // Hide loading
+      // Hide loading only (no error message shown)
       loadingDiv.style.display = 'none';
-      
-      // Show error message
-      errorDiv.style.display = 'block';
-      errorDiv.textContent = 'There was a problem submitting your form. Please try again.';
+      console.error('Submission error:', error); // Optional for debugging
     })
     .finally(() => {
       submitButton.disabled = false;
