@@ -1133,7 +1133,14 @@ Let's unlock the power of data together.
   <script src="assets/js/main.js"></script>
 
   <script src="path/to/contact-form.js"></script>
-  
+
+  <script>
+  document.querySelector('.php-email-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent actual submission
+    alert('This form is not currently connected to a backend.');
+  });
+  </script>
+
 </body>
 
 </html>
