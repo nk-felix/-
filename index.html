@@ -1005,7 +1005,14 @@ Let's unlock the power of data together.
           </div>
 
          <div class="col-lg-7">
-            <form id="contactForm" action="https://formspree.io/f/manegzwn" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="contactForm" action="#" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <!-- Your existing form fields -->
+  
+              <!-- Add a hidden input for Formspree to know where to send the data -->
+              <input type="hidden" name="_subject" value="New Contact Form Submission">
+  
+                <!-- Rest of your form -->
+                  </form>
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -1131,68 +1138,6 @@ Let's unlock the power of data together.
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    
-    if (form) {
-      form.addEventListener('submit', function(event) {
-        // This prevents the default form submission
-        event.preventDefault();
-        
-        const submitButton = form.querySelector('button[type="submit"]');
-        const loadingDiv = form.querySelector('.loading');
-        const errorDiv = form.querySelector('.error-message');
-        const sentDiv = form.querySelector('.sent-message');
-        
-        // Show loading indicator
-        loadingDiv.style.display = 'block';
-        errorDiv.style.display = 'none';
-        sentDiv.style.display = 'none';
-        submitButton.disabled = true;
-        
-        // Get form data
-        const formData = new FormData(form);
-        
-        // Send form data to Formspree
-        fetch('https://formspree.io/f/manegzwn', {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        })
-        .then(response => response.json())
-        .then(data => {
-          loadingDiv.style.display = 'none';
-          
-          if (data.ok) {
-            // Success
-            sentDiv.style.display = 'block';
-            form.reset(); // Clear the form
-          } else {
-            // Error
-            errorDiv.textContent = data.error || 'Something went wrong. Please try again.';
-            errorDiv.style.display = 'block';
-          }
-        })
-        .catch(error => {
-          loadingDiv.style.display = 'none';
-          errorDiv.textContent = 'There was a network error. Please try again.';
-          errorDiv.style.display = 'block';
-          console.error(error);
-        })
-        .finally(() => {
-          submitButton.disabled = false;
-        });
-        
-        // Return false to ensure form doesn't submit normally
-        return false;
-      });
-    }
-  });
-</script>
   
 </body>
 
