@@ -48,14 +48,45 @@
       <h1 class="sitename">NK FELIX</h1>
     </a>
 
+    <!-- Social Icons -->
     <div class="social-links text-center">
-      <a href="https://x.com/AnalyticsAndBI" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
-      <a href="mailto:lax2206x@gmail.com" class="facebook" target="_blank"><i class="bi bi-envelope" style="color: #D44638;"></i></a>
-      <a href="https://wa.me/+254720251285" class="whatsapp" target="_blank"><i class="bi bi-whatsapp" style="color: #25D366;"></i></a>
-      <a href="https://www.linkedin.com/in/nk-felix" class="linkedin" target="_blank"><i class="bi bi-linkedin" style="color: #0A66C2;"></i></a>
+      <a href="https://x.com/AnalyticsAndBI" class="social-icon twitter" target="_blank">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+      <a href="mailto:lax2206x@gmail.com" class="social-icon email" target="_blank">
+        <i class="bi bi-envelope"></i>
+      </a>
+      <a href="https://wa.me/+254720251285" class="social-icon whatsapp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/nk-felix" class="social-icon linkedin" target="_blank">
+        <i class="bi bi-linkedin"></i>
+      </a>
     </div>
-  
 
+    <!-- CSS -->
+    <style>
+      .social-links a.social-icon {
+        font-size: 22px;
+        padding: 12px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+      }
+
+      .social-links a.social-icon:hover {
+        transform: scale(1.2);
+      }
+
+      /* Maintain brand colors */
+      .social-icon.twitter i { color: #1DA1F2; }
+      .social-icon.email i { color: #D44638; }
+      .social-icon.whatsapp i { color: #25D366; }
+      .social-icon.linkedin i { color: #0A66C2; }
+    </style>
+    
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
@@ -77,13 +108,40 @@
     <section id="hero" class="hero section dark-background">
 
       <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
-
+    
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Hello and Welcome!</h2>
         <p>I'm <span class="typed" data-typed-items="Data Analyst, BI Analyst, Content Writer">Data Analyst</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        
+        <!-- Spacer -->
+        <div style="height: 100px;"></div> <!-- Adjust height if needed -->
+    
+        <!-- Buttons -->
+        <div style="max-width: 600px; margin: 0 auto; padding: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      
+          <a href="#portfolio" 
+             class="inline-flex items-center px-8 py-3 rounded-sm font-medium"
+             style="background-color: #002347; color: #fdc632; text-decoration: none; font-size: 18px; width: 200px; display: inline-block; border-radius: 10px; text-align: center; border: 2px solid #002347;"
+             onmouseover="this.style.backgroundColor='transparent'; this.style.color='#002347'; this.style.borderColor='#002347';"
+             onmouseout="this.style.backgroundColor='#002347'; this.style.color='#fdc632'; this.style.borderColor='#002347';">
+            <i class="fas fa-folder-open mr-2"></i> View Projects
+          </a>
+        
+          <a href="mailto:lax2206x@gmail.com" 
+             target="_blank"
+             class="inline-flex items-center px-8 py-3 rounded-sm font-medium"
+             style="background-color: #fdc632; color: #002347; text-decoration: none; font-size: 18px; width: 200px; display: inline-block; border-radius: 10px; text-align: center;"
+             onmouseover="this.style.backgroundColor='#002347'; this.style.color='#fdc632';"
+             onmouseout="this.style.backgroundColor='#fdc632'; this.style.color='#002347';">
+            <i class="fas fa-paper-plane mr-2"></i> Send Message
+          </a>
+        
+        </div>        
+    
       </div>
-
+    
     </section><!-- /Hero Section -->
+    
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -91,7 +149,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
-        <p>Dynamic Data Analyst and Business Intelligence (BI) Specialist with 7+ years of experience leveraging data-driven methodologies to inform strategic decision-making and operational efficiencies.
+        <p>Dynamic Data Analyst and Business Intelligence (BI) Specialist with 7+ years of experience leveraging data-driven approaches to inform strategic decision-making and operational efficiencies.
 Beyond analytics, I am a content writer, bridging the gap between raw data and compelling narratives. My work is driven by precision, innovation, and a relentless pursuit of excellence—whether uncovering hidden trends, optimizing decision-making, or crafting insightful reports.
 I thrive at the intersection of technology, business, and storytelling, ensuring that every insight is not just data-backed but also strategically impactful.
 Let's unlock the power of data together.
@@ -199,13 +257,10 @@ Let's unlock the power of data together.
               <div class="row">
                   <div class="col-lg-6">
                       <ul>
-                        <li>
-                          <i class="bi bi-linkedin" style="font-size: 18px;"></i> 
-                          <strong>LinkedIn:</strong>
-                          <a href="https://www.linkedin.com/in/nk-felix" target="_blank" style="margin-left: 8px;">
-                            <i class="bi bi-linkedin" style="font-size: 28px;"></i>
-                          </a>
-                        </li>
+                        <ul>
+                          <li><i class="bi bi-globe"></i> <strong>Language:</strong> <span>English</span></li>
+                          </li>
+                      </ul>                      
                         
                           <li>
                             <i class="bi bi-phone" style="font-size: 1rem; margin-right: 5px;"></i>
@@ -218,7 +273,7 @@ Let's unlock the power of data together.
                   </div>
                   <div class="col-lg-6">
                       <ul>
-                          <li><i class="bi bi-globe"></i> <strong>Language:</strong> <span>English</span></li>
+                          <li><i class="bi bi-mortarboard"></i> <strong>Education:</strong> <span>Bachelor</span></li>
                           <li>
                             <i class="bi bi-envelope-fill me-2"></i>
                             <strong>Email:</strong>
@@ -427,28 +482,12 @@ Let's unlock the power of data together.
         <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
+            <h3 class="resume-title">Summary</h3>
 
             <div class="resume-item pb-0">
               <h4>NK FELIX</h4>
               <p><em>Innovative and results-driven Data Analyst with 7+ years of experience transforming complex datasets into actionable insights. Skilled in utilizing advanced analytics tools and techniques to drive data-driven decision-making, from initial analysis to delivering impactful, polished reports and visualizations.</em></p>
-              <ul>
-                <li>Nairobi, Kenya</li>
-                <li>
-                  <i class="bi bi-phone" style="font-size: 1rem; margin-right: 5px;"></i>
-                            <strong>Phone:</strong>
-                            <a href="https://wa.me/254720251285" target="_blank" style="margin-left: 8px;">
-                              <i class="bi bi-whatsapp" style="font-size: 1.8rem; color: #25D366;"></i>
-                            </a>
-                </li>
-                <li>
-                  <i class="bi bi-envelope-fill me-2"></i>
-                            <strong>Email:</strong>
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lax2206x@gmail.com" target="_blank" rel="noopener noreferrer">
-                              <i class="bi bi-envelope" style="font-size: 2rem; color: #ec1e0c; margin-left: 10px;"></i>
-                            </a>
-                </li>
-              </ul>
+              
             </div><!-- Edn Resume Item -->
 
             <h3 class="resume-title">Education</h3>
@@ -460,17 +499,41 @@ Let's unlock the power of data together.
 
             <div class="resume-item">
               <h4>Professional Certifications</h4>
-              <h5>2019 - 2024</h5>
-              <li>Power BI Data Analyst Associate (PL-300)</li>
-              <li>Google Data Analytics Professional Certificate</li>
-              <li>Certified Business Intelligence Professional (CBIP)</li>
-              <li>Tableau Desktop Specialist</li>
-              <li>SQL for Data Science (Coursera Certification)</li>
-              <li>Data Science Professional Certificate (IBM)</li>
-              <li>AWS Certified Data Analytics</li>
-
-              </p>
-            </div><!-- Edn Resume Item -->
+              <h5>2019</h5>
+              <ul class="no-bullets">
+                <li><i class="bi bi-award"></i> Power BI Data Analyst Associate (PL-300)</li>
+                <li><i class="bi bi-award"></i> Google Data Analytics Professional Certificate</li>
+              </ul>
+              <h5>2022-2024</h5>
+              <ul class="no-bullets">
+                <li><i class="bi bi-award"></i> Certified Business Intelligence Professional (CBIP)</li>
+                <li><i class="bi bi-award"></i> Tableau Desktop Specialist</li>
+              </ul>
+              <ul class="no-bullets">
+                <li><i class="bi bi-award"></i> Data Science Professional Certificate (IBM)</li>
+              </ul>
+              <h5>2025</h5>
+              <ul class="no-bullets">
+                <li><i class="bi bi-award"></i> AWS Certified Data Analytics</li>
+              </ul>
+            </div><!-- End Resume Item -->
+            
+            <style>
+              /* Remove bullets from list */
+              .no-bullets {
+                list-style-type: none;
+                padding-left: 0;
+              }
+            
+              .no-bullets li {
+                margin-bottom: 10px; /* Optional, adds spacing between items */
+              }
+            
+              .no-bullets li i {
+                margin-right: 8px; /* Adds space between the icon and text */
+              }
+            </style>
+            
 
           </div>
 
@@ -531,158 +594,218 @@ Let's unlock the power of data together.
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
+              <div class="portfolio-content h-100 position-relative">
                 <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Data Analytics Project 1</h4>
-                  <p>Titanic-I.-End-to-end-Data-Analytics-Project</p>
-                  <a href="assets/img/portfolio/app-1.jpg" title="Data Analytics Project 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/nk-felix/Titanic-I.-End-to-end-Data-Analytics-Project/blob/main/Titanic_I_End_to_end_DA_project_ipynb.ipynb" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
-                 </div>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">Data Analytics Project 1</h4>
+                  <p class="text-white">Titanic-I.-End-to-end-Data-Analytics-Project</p>
+                  <a href="https://github.com/nk-felix/Titanic-I.-End-to-end-Data-Analytics-Project/blob/main/Titanic_I_End_to_end_DA_project_ipynb.ipynb" 
+                     class="btn mt-3"
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
+                </div>
               </div>
+              
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>BI Analytics Project 1</h4>
-                  <p>Sales-Analysis-using-Python</p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="BI Analytics Project 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/nk-felix/Sales-Analysis-using-Python/blob/main/SalesAnalysis.ipynb" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">BI Analytics Project 1</h4>
+                  <p class="text-white">Sales-Analysis-using-Python</p>
+                  <a href="https://github.com/nk-felix/Sales-Analysis-using-Python/blob/main/SalesAnalysis.ipynb" 
+                     class="btn mt-3"
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Data Viz Project 1</h4>
-                  <p>Transform, Optimize, Innovate</p>
-                  <a href="assets/img/portfolio/branding-1.jpg" title="Data Viz Project 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://medium.com/@nkfelix" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">Data Viz Project 1</h4>
+                  <p class="text-white">Transform, Optimize, Innovate</p>
+                  <a href="https://medium.com/@nkfelix" 
+                     class="btn mt-3"
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Data Strategy Project 1</h4>
-                  <p>Transform, Optimize, Innovate</p>
-                  <a href="assets/img/portfolio/books-1.jpg" title="Data Strategy Project 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://medium.com/@nkfelix" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">Data Strategy Project 1</h4>
+                  <p class="text-white">Transform, Optimize, Innovate</p>
+                  <a href="https://medium.com/@nkfelix" 
+                     class="btn mt-3"
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Data Analytics Project 2</h4>
-                  <p>Transform, Optimize, Innovate</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="Data Analytics Project 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://medium.com/@nkfelix" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">Data Analytics Project 2</h4>
+                  <p class="text-white">Transform, Optimize, Innovate</p>
+                  <a href="https://medium.com/@nkfelix" 
+                     class="btn mt-3"
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>BI Analytics Project 2</h4>
-                  <p>Analysis-of-Netflix-Data-Using-Python</p>
-                  <a href="assets/img/portfolio/product-2.jpg" title="BI Analytics Project 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/nk-felix/Analysis-of-Netflix-Data-Using-Python/blob/main/Analysis_of_Netflix_Data_Using_Python_.ipynb" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">BI Analytics Project 2</h4>
+                  <p class="text-white">Analysis-of-Netflix-Data-Using-Python</p>
+                  <a href="https://github.com/nk-felix/Analysis-of-Netflix-Data-Using-Python/blob/main/Analysis_of_Netflix_Data_Using_Python_.ipynb" 
+                     class="btn mt-3"
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Data Viz Project 2</h4>
-                  <p>Transform, Optimize, Innovate</p>
-                  <a href="assets/img/portfolio/branding-2.jpg" title="Data Viz Project 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://medium.com/@nkfelix" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">Data Viz Project 2</h4>
+                  <p class="text-white">Transform, Optimize, Innovate</p>
+                  <a href="https://medium.com/@nkfelix" 
+                     class="btn mt-3"
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Data Strategy Project 2</h4>
-                  <p>Transform, Optimize, Innovate</p>
-                  <a href="assets/img/portfolio/books-2.jpg" title="Data Strategy Project 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://medium.com/@nkfelix" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">Data Strategy Project 2</h4>
+                  <p class="text-white">Transform, Optimize, Innovate</p>
+                  <a href="https://medium.com/@nkfelix" 
+                     class="btn mt-3"
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Data Analytics Project 3</h4>
-                  <p>Transform, Optimize, Innovate</p>
-                  <a href="assets/img/portfolio/app-3.jpg" title="Data Analytics Project 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://medium.com/@nkfelix" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">Data Analytics Project 3</h4>
+                  <p class="text-white">Transform, Optimize, Innovate</p>
+                  <a href="https://medium.com/@nkfelix" 
+                     class="btn mt-3" 
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>BI Analytics Project 3</h4>
-                  <p>Retail-Sales-Analysis-using-SQL</p>
-                  <a href="assets/img/portfolio/product-3.jpg" title="BI Analytics Project 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/nk-felix/Retail-Sales-Analysis-using-SQL" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">BI Analytics Project 3</h4>
+                  <p class="text-white">Retail-Sales-Analysis-using-SQL</p>
+                  <a href="https://github.com/nk-felix/Retail-Sales-Analysis-using-SQL" 
+                     class="btn mt-3" 
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Data Viz Project 3</h4>
-                  <p>Transform, Optimize, Innovate</p>
-                  <a href="assets/img/portfolio/branding-3.jpg" title="Data Viz Project 3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://medium.com/@nkfelix" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">Data Viz Project 3</h4>
+                  <p class="text-white">Transform, Optimize, Innovate</p>
+                  <a href="https://medium.com/@nkfelix" 
+                     class="btn mt-3"
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Data Strategy Project 3</h4>
-                  <p>Transform, Optimize, Innovate</p>
-                  <a href="assets/img/portfolio/books-3.jpg" title="Data Strategy Project 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://medium.com/@nkfelix" title="More Details" class="details-link" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6);">
+                  <h4 class="text-white">Data Strategy Project 3</h4>
+                  <p class="text-white">Transform, Optimize, Innovate</p>
+                  <a href="https://medium.com/@nkfelix" 
+                     class="btn mt-3" 
+                     style="background-color: #fdc632; color: #002347; border: none; padding: 10px 25px; border-radius: 8px;"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
+                
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -893,126 +1016,155 @@ Let's unlock the power of data together.
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Get in Touch – I'm always open to discussing how data-driven solutions can elevate your business. Reach out to connect!</p>
+        <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+        </p>
       </div><!-- End Section Title -->
 
-      <div class="social-links text-center contact-icons">
-        <!-- Email and WhatsApp links added at the beginning -->
-        <a href="mailto:lax2206x@gmail.com" class="email" target="_blank"><i class="bi bi-envelope"></i></a>
-        <a href="https://wa.me/254720251285" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="container">
+          <div class="row gy-4 justify-content-center">
         
-        <!-- Social Media Links -->
-        <a href="https://x.com/AnalyticsAndBI" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/NKanalytics/" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/cogna.cs/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.pinterest.com/nk_felix/" class="pinterest" target="_blank"><i class="bi bi-pinterest"></i></a>
-        <a href="https://www.linkedin.com/in/nk-felix" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/nk-felix" class="github" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="https://www.youtube.com/@nk-felix" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
-        <a href="https://medium.com/@nkfelix" class="medium" target="_blank"><i class="bi bi-medium"></i></a>
-        <a href="https://www.tiktok.com/@cognacs" class="tiktok" target="_blank"><i class="bi bi-tiktok"></i></a>
-    </div>
-    
-    <!-- Include Bootstrap Icons CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    
-    <style>
-      /* Social Link Icon Colors */
-      .contact-icons a {
-        font-size: 24px; /* Reduced icon size */
-        margin: 8px; /* Reduced space between icons */
-        display: inline-block;
-        padding: 15px; /* Reduced padding for smaller circles */
-        border-radius: 50%; /* Circle around the icon */
-        background-color: #f0f0f0; /* Default circle color */
-        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-      }
-    
-      .contact-icons .email i { color: #FF0000; } /* Red color for the email icon */
-      .contact-icons .whatsapp i { color: #25D366; }
-      .contact-icons .twitter i { color: #1DA1F2; }
-      .contact-icons .facebook i { color: #1877F2; }
-      .contact-icons .instagram i { color: #E1306C; }
-      .contact-icons .pinterest i { color: #E60023; }
-      .contact-icons .linkedin i { color: #0077B5; }
-      .contact-icons .github i { color: #333333; }
-      .contact-icons .youtube i { color: #FF0000; }
-      .contact-icons .medium i { color: #00AB6C; }
-      .contact-icons .tiktok i { color: #000000; }
-    
-      /* Hover Effect for Color Change */
-      .contact-icons a:hover {
-        background-color: #25ea5abf; /* Lighter bluish color on hover */
-        transform: scale(1.3); /* Zoom effect */
-      }
+            <!-- First Column -->
+            <div class="col-lg-6 d-flex flex-column align-items-stretch">
+              
+              <!-- Address Card -->
+              <div class="info-wrap mb-4" style="padding: 20px; background-color: #eceaed;">
+                <!-- Contact Information Subheader -->
+                <h3 class="text-center mb-4" style="font-size: 20px; font-weight: bold;">Contact Information</h3>
 
-      /* Ensure the zoom effect is applied smoothly to all icons */
-      .contact-icons a {
-        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-      }
+                <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p>44 Parklands Rd, Nairobi</p>
+                  </div>
+                </div>
+                <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call</h3>
+                    <p>+254720251285</p>
+                  </div>
+                </div>
+                <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email</h3>
+                    <p>lax2206x@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Follow Me Card -->
+              <div class="info-wrap mb-4" style="background-color: #eceaed; border-radius: 10px; padding: 20px;">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500" style="width: 100%;">
+                  <div class="p-4 rounded-xl shadow-md w-100" style="background-color: transparent;">
+                    <h3 class="text-xl font-semibold mb-4 text-center">Follow Me</h3>
+                    <div class="social-links text-center d-flex justify-content-center flex-wrap gap-3">
+                      <!-- Icons -->
+                      <a href="https://wa.me/+254720251285" class="social-icon whatsapp" target="_blank">
+                        <i class="bi bi-whatsapp"></i>
+                      </a>
+                      <a href="https://x.com/AnalyticsAndBI" class="social-icon twitter" target="_blank">
+                        <i class="bi bi-twitter-x"></i>
+                      </a>
+                      <a href="https://www.facebook.com/NKanalytics/" class="social-icon facebook" target="_blank">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                      <a href="https://www.pinterest.com/nk_felix/" class="social-icon pinterest" target="_blank">
+                        <i class="bi bi-pinterest"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/nk-felix" class="social-icon linkedin" target="_blank">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                      <a href="https://github.com/nk-felix" class="social-icon github" target="_blank">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://www.youtube.com/@nk-felix" class="social-icon youtube" target="_blank">
+                        <i class="bi bi-youtube"></i>
+                      </a>
+                      <a href="https://medium.com/@nkfelix" class="social-icon medium" target="_blank">
+                        <i class="bi bi-medium"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-          
-      /* Synchronized Waving Animation */
-      @keyframes wave {
-        0%, 100% {
-          transform: translateY(0);
-        }
-        25% {
-          transform: translateY(-5px);
-        }
-        50% {
-          transform: translateY(0);
-        }
-        75% {
-          transform: translateY(-5px);
-        }
-      }
-    
-      /* Apply synchronized wave animation with a slight delay for each icon in the contact section */
-      .contact-icons a:nth-child(1) {
-        animation: wave 1.5s ease-in-out infinite;
-      }
-      .contact-icons a:nth-child(2) {
-        animation: wave 1.5s ease-in-out 0.1s infinite;
-      }
-      .contact-icons a:nth-child(3) {
-        animation: wave 1.5s ease-in-out 0.2s infinite;
-      }
-      .contact-icons a:nth-child(4) {
-        animation: wave 1.5s ease-in-out 0.3s infinite;
-      }
-      .contact-icons a:nth-child(5) {
-        animation: wave 1.5s ease-in-out 0.4s infinite;
-      }
-      .contact-icons a:nth-child(6) {
-        animation: wave 1.5s ease-in-out 0.5s infinite;
-      }
-      .contact-icons a:nth-child(7) {
-        animation: wave 1.5s ease-in-out 0.6s infinite;
-      }
-      .contact-icons a:nth-child(8) {
-        animation: wave 1.5s ease-in-out 0.7s infinite;
-      }
-      .contact-icons a:nth-child(9) {
-        animation: wave 1.5s ease-in-out 0.8s infinite;
-      }
-      .contact-icons a:nth-child(10) {
-        animation: wave 1.5s ease-in-out 0.9s infinite;
-      }
-    
-      /* Ensure the zoom effect is smoothly applied */
-      .contact-icons a:hover {
-        transform: scale(1.3) !important; /* Ensure zoom is applied even with animation */
-      }
-    
-      /* Non-contact section social icons will remain still */
-      .social-links a {
-        animation: none; /* Remove animation for non-contact icons */
-      }
-    </style>
-      
+              <!-- Hover Effects CSS -->
+              <style>
+                .social-links a.social-icon {
+                  font-size: 22px;
+                  padding: 12px;
+                  border-radius: 50%;
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  transition: transform 0.3s ease, color 0.3s ease;
+                }
 
-    </section><!-- /Contact Section -->
+                /* Enlarge effect on hover */
+                .social-links a.social-icon:hover {
+                  transform: scale(1.2);
+                }
+
+                /* Default brand colors (applied when NOT hovered) */
+                .social-icon.whatsapp:not(:hover) i { color: #25D366; }
+                .social-icon.twitter:not(:hover) i { color: #1DA1F2; }
+                .social-icon.facebook:not(:hover) i { color: #1877F2; }
+                .social-icon.pinterest:not(:hover) i { color: #E60023; }
+                .social-icon.linkedin:not(:hover) i { color: #0077B5; }
+                .social-icon.github:not(:hover) i { color: #333; }
+                .social-icon.youtube:not(:hover) i { color: #FF0000; }
+                .social-icon.medium:not(:hover) i { color: #000000; }
+
+                /* On hover, icon turns white */
+                .social-icon:hover i {
+                  color: white;
+                }
+              </style>
+
+        
+            </div>
+        
+            <!-- Second Column -->
+            <div class="col-lg-6 d-flex flex-column align-items-stretch">
+        
+              <!-- Send Message Card -->
+              <div class="card p-5 d-flex justify-content-center align-items-center mb-4" 
+              style="min-height: 300px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #eceaed;">
+              <a href="mailto:lax2206x@gmail.com" 
+              target="_blank"
+              class="d-inline-flex align-items-center justify-content-center send-message-btn"
+              style="background-color: #fdc632; color: #002347; text-decoration: none; font-size: 18px; padding: 12px 24px; width: 220px; border-radius: 10px; text-align: center; transition: all 0.3s ease;">
+              <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Send Message
+              </a>
+              </div>
+
+              <!-- Quote Card -->
+              <div class="card p-5 d-flex justify-content-center align-items-center" 
+              style="min-height: 300px; background-color: #eceaed; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+              <blockquote class="text-center" style="font-size: 24px; font-weight: bold; color: #002347;">
+              "Measure twice, cut once."
+              <br><span style="font-size: 18px; font-weight: normal; color: #555;">– 16th Century Proverb</span>
+              </blockquote>
+              </div>
+        
+              <style>
+                .send-message-btn:hover {
+                  background-color: #002347 !important;
+                  color: #fdc632 !important;
+                }
+                .send-message-btn:hover i {
+                  color: #fdc632 !important;
+                }
+              </style>        
+
+            </div>
+
+          </section><!-- /Contact Section -->
+
 
   </main>
 
