@@ -59,11 +59,11 @@
       <a href="https://wa.me/+254720251285" class="social-icon whatsapp" target="_blank">
         <i class="bi bi-whatsapp"></i>
       </a>
-      <a href="https://www.linkedin.com/in/nk-felix" class="social-icon linkedin" target="_blank">
-        <i class="bi bi-linkedin"></i>
+      <a href="https://medium.com/@nkfelix" class="social-icon medium" target="_blank">
+        <i class="bi bi-medium"></i>
       </a>
     </div>
-
+    
     <!-- CSS -->
     <style>
       .social-links a.social-icon {
@@ -73,19 +73,26 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        transition: transform 0.3s ease;
+        background-color: #ebe5e9;
+        transition: transform 0.3s ease, color 0.3s ease;
       }
-
+    
       .social-links a.social-icon:hover {
         transform: scale(1.2);
       }
-
-      /* Maintain brand colors */
-      .social-icon.twitter i { color: #1DA1F2; }
-      .social-icon.email i { color: #D44638; }
+    
+      /* Default icon colors */
+      .social-icon.twitter i { color: #000000 !important; }
+      .social-icon.email i { color: #e20c0c; }
       .social-icon.whatsapp i { color: #25D366; }
-      .social-icon.linkedin i { color: #0A66C2; }
+      .social-icon.medium i { color: #000000; }
+    
+      /* Hover color for X icon only */
+      .social-icon.twitter:hover i {
+        color: #ffffff !important;
+      }
     </style>
+    
     
     <nav id="navmenu" class="navmenu">
       <ul>
